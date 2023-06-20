@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgba(220, 218, 218, 0.307);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+}
+.container .cards{
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+}
+/*Start Card*/
+.container .cards .card{
+    width: 302px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    padding: 36px 74px 36px 36px;
+    height: 450px;
+}
+.container .cards .card img{
+    width: 54px;
+}
+.container .cards .card  h1{
+    text-transform: uppercase;
+    font-size: 2.1rem;
+    font-family: 'Big Shoulders Display', cursive;
+    margin-top: 8px;
+}
+.container .cards .card  p{
+    color: #ffffffb0;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-bottom: 60px;
+    line-height: 1.5rem;
+}
+.container .cards .card button{
+    width: fit-content;
+    padding: .9rem 2.2rem;
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.card:first-child {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    background-color: var(--Bright-orange);
+    color: var(--Bright-orange);
+}
+.card:nth-child(2) {
+    background-color: var(--Dark-cyan);
+    color: var(--Dark-cyan);
+}
+.card:nth-child(3) {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-dark-cyan);
+}
+.container .cards .card button:hover{
+    border: .1px white solid;
+}
+.card:first-child button:hover {
+    background-color: var(--Bright-orange);
+}
+.card:nth-child(2) button:hover  {
+    background-color: var(--Dark-cyan);
+}
+.card:nth-child(3) button:hover  {
+    background-color: var(--Very-dark-cyan);
+
+}
+/*End Card*/
+
+/*Start Media for mobile screen
+    Usually max-width is "480px" ,but in this case i prefer it should be "580px".
+*/
+
+@media (min-width: 320px) and (max-width: 580px){
+    .container .cards{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card:first-child {
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 7px;
+    }
+
+    .card:nth-child(3) {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 7px;
+    }
+
+}
